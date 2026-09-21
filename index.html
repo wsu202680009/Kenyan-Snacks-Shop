@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kenyan Snacks Shop</title>
+  <meta name="description" content="Fresh Kenyan snacks: samosa, mandazi, bhajia, mahindi choma and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="#top" class="logo">Kenyan Snacks Shop</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit us</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-controls="cart" aria-expanded="false">
+      Basket <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero: a kanga-style signboard -->
+    <section class="hero">
+      <div class="kanga">
+        <div class="kanga-inner">
+          <p class="hero-karibu">Karibu!</p>
+          <h1>Kenyan Snacks Shop</h1>
+          <p class="hero-text">Samosa, mandazi, bhajia and mahindi choma, made fresh every morning the way they are sold on the streets of Nairobi and Mombasa.</p>
+          <a href="#menu" class="btn btn-primary">See the menu</a>
+          <p class="jina">“Haba na haba hujaza kibaba”<span>Little by little fills the measure</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+      <div class="container">
+        <h2>Today's menu</h2>
+        <p class="section-intro">All prices are in Kenyan shillings (KES). Tap “Add” to put a snack in your basket.</p>
+
+        <div class="filters" role="group" aria-label="Filter snacks">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="fried">Fried</button>
+          <button class="filter" data-filter="roasted">Roasted</button>
+          <button class="filter" data-filter="sweet">Sweet</button>
+          <button class="filter" data-filter="drinks">Drinks</button>
+        </div>
+
+        <ul class="menu-list" id="menuList">
+          <!-- Snacks are added here by script.js -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div>
+          <h2>About us</h2>
+          <p>We started as a small kibanda by the roadside, frying mandazi before sunrise for people on their way to work. Today we still cook everything by hand, in small batches, with the recipes our family has used for years.</p>
+          <p>Our samosas are filled with spiced minced beef or lentils, our bhajia are sliced thin and crispy, and our mahindi choma is roasted over charcoal and rubbed with lemon and chilli.</p>
+        </div>
+        <ul class="facts">
+          <li><strong>Fresh daily</strong>Cooked every morning, never reheated from yesterday.</li>
+          <li><strong>Local ingredients</strong>Maize, potatoes and coconuts from Kenyan farms.</li>
+          <li><strong>Fair prices</strong>Street-food prices, so everyone can enjoy a snack.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Visit / contact -->
+    <section class="visit" id="visit">
+      <div class="container visit-grid">
+        <div>
+          <h2>Visit us</h2>
+          <p><strong>Where:</strong> Moi Avenue, Nairobi CBD</p>
+          <p><strong>Open:</strong> Monday to Saturday, 6:00 am – 8:00 pm<br>Sunday, 8:00 am – 2:00 pm</p>
+          <p><strong>Phone:</strong> +254 700 000 000</p>
+          <p><strong>Email:</strong> hello@kenyansnacks.shop</p>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3>Send us a message</h3>
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Basket panel -->
+  <aside class="cart" id="cart" aria-label="Your basket" hidden>
+    <div class="cart-head">
+      <h2>Your basket</h2>
+      <button class="close-btn" id="closeCart" aria-label="Close basket">✕</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <p class="cart-empty" id="cartEmpty">Your basket is empty. Add a snack from the menu to start your order.</p>
+    <div class="cart-foot">
+      <p class="cart-total">Total: <span id="cartTotal">KES 0</span></p>
+      <button class="btn btn-primary" id="checkoutBtn">Place order</button>
+      <p class="order-status" id="orderStatus" role="status"></p>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay" hidden></div>
+
+  <footer class="site-footer">
+    <p>© 2026 Kenyan Snacks Shop. Made with love in Kenya.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
