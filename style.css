@@ -127,7 +127,7 @@ section { padding: 4.5rem 0; }
   box-shadow: 0 8px 0 var(--k-black);
 }
 .kanga-inner {
-  background: var(--k-black);
+  background: #0B2A5B; /* navy blue */
   color: var(--k-white);
   border: 4px solid var(--k-white);
   padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3.5rem);
