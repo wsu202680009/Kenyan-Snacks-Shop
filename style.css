@@ -119,11 +119,11 @@ section { padding: 4.5rem 0; }
   margin: 0 auto;
   padding: 28px;
   border-radius: 6px;
-  /* Maasai shuka: red cloth with a dark checked pattern */
+  /* Yellow checked cloth border */
   background:
-    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0 5px, transparent 5px 12px, rgba(20, 30, 90, 0.5) 12px 14px, transparent 14px 26px),
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0 5px, transparent 5px 12px, rgba(20, 30, 90, 0.5) 12px 14px, transparent 14px 26px),
-    var(--k-red);
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 5px, transparent 5px 12px, rgba(0, 0, 0, 0.12) 12px 14px, transparent 14px 26px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.18) 0 5px, transparent 5px 12px, rgba(0, 0, 0, 0.12) 12px 14px, transparent 14px 26px),
+    var(--mango);
   box-shadow: 0 8px 0 var(--k-black);
 }
 .kanga-inner {
@@ -141,7 +141,7 @@ section { padding: 4.5rem 0; }
 }
 .hero h1 {
   font-size: clamp(2.4rem, 8vw, 5rem);
-  color: var(--k-white);
+  color: var(--mango);
   text-shadow: 4px 4px 0 var(--k-red);
   margin-bottom: 1.25rem;
 }
